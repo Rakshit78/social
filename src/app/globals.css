@@ -1,0 +1,27 @@
+@import url("https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i");
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+:root {
+  --Error: #da6a3f;
+  --Grey: #fafafa;
+  --Primary: #20b2ff;
+  --Stroke: #e3e3e5;
+  --Success: #58bd7c;
+  --Text: #090727;
+  --Text-2: #383650;
+  --Text-3: #686679;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+  font-family: Nunito, sans-serif;
+  background-color: var(--Grey);
+}

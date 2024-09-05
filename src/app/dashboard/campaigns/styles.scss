@@ -1,0 +1,82 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 24px 0 24px 0px;
+  }
+  .campaigns-container {
+    max-height: 86dvh;
+    overflow-y: scroll;
+    .campaign-card {
+      padding: 16px;
+      margin-bottom: 16px;
+      box-shadow: none;
+      .card-header {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 8px;
+        .name {
+          margin-right: 16px;
+          font-size: 20px;
+          font-weight: 600;
+          line-height: normal;
+          color: var(--Text);
+        }
+        .status {
+          background-color: aquamarine;
+          color: white;
+          border-radius: 4px;
+          padding: 4px 8px;
+          margin: 4px;
+        }
+      }
+      .description {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 19px;
+        color: var(--Text-3);
+        margin-bottom: 12px;
+      }
+      .footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .reactions {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          .reaction {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-right: 8px;
+            .reaction-icon {
+              color: #fdc140;
+              font-size: 20px;
+            }
+            .reaction-txt {
+              font-size: 12px;
+              font-weight: 500;
+              margin-left: 2px;
+            }
+          }
+        }
+        .date {
+          margin-left: 20px;
+          font-size: 12px;
+          font-weight: 200;
+          line-height: 19px;
+          color: var(--Text-2);
+        }
+      }
+    }
+    .campaign-card:last-child {
+      margin-bottom: 0px;
+    }
+  }
+}

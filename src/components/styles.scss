@@ -1,0 +1,210 @@
+.emptyBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+  border: 1px dashed grey;
+}
+
+.channelBox {
+  height: 180px;
+  width: 240px;
+  margin: 16px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  position: relative;
+  border: 1px solid var(--Stroke);
+
+  cursor: pointer;
+
+  .statusBadge {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    animation: blinking 2s ease-out infinite;
+  }
+
+  @keyframes blinking {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  .avatar {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    object-fit: cover;
+    border: 1px solid var(--Stroke);
+    background-color: white;
+  }
+
+  .details-container {
+    position: absolute;
+    bottom: -36px;
+    background-color: white;
+    border-radius: 16px;
+    padding: 16px;
+    width: 180px;
+    border: 1px solid var(--Stroke);
+    .title {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      .titleText {
+        font-weight: bold;
+      }
+    }
+
+    .details {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      margin: 8px;
+    }
+
+    .button {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+    }
+  }
+}
+
+.create-campaign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .container {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 20px;
+    border-radius: 8px;
+    .title {
+      margin-bottom: 20px;
+    }
+    .text-field,
+    .date-picker,
+    .channels-picker {
+      margin-bottom: 16px;
+    }
+    .btns-container {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: end;
+      .cancel-btn {
+        background-color: grey;
+        margin-right: 8px;
+      }
+      .create-btn {
+        align-self: center;
+        width: max-content;
+      }
+    }
+  }
+}
+
+.dashboard-buttons-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  width: 460px;
+  padding: 12px;
+  cursor: pointer;
+  .title {
+    color: var(--Text);
+    font-weight: 600;
+  }
+  .footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4px;
+    color: var(--Primary);
+    .subtitle {
+      font-weight: bold;
+    }
+  }
+}
+
+.analytics-container {
+  padding: 16px 4px 16px 4px;
+  max-height: 76dvh;
+  overflow: scroll;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.social-gpt {
+  display: flex;
+  flex-direction: column;
+  border-width: 1px;
+  border-color: var(--Primary);
+  border-style: solid;
+  padding: 8px;
+  border-radius: 8px;
+  height: 64dvh;
+  flex: 1;
+  .messages-wrapper {
+    flex: 9;
+    overflow-y: scroll;
+    .messages {
+      background-color: transparent;
+      .cs-message-list__scroll-wrapper {
+        padding: 0 0 0 0;
+      }
+      .typing {
+        background-color: transparent;
+      }
+    }
+  }
+  .empty-wrapper {
+    flex: 9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .input-wrapper {
+    flex: 1;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    border-top-width: 1px;
+    border-top-color: var(--Primary);
+    border-top-style: solid;
+    padding-top: 8px;
+    border-radius: 8px;
+    align-items: center;
+    .input {
+      margin-right: 4px;
+    }
+    .btn {
+      padding: 16px;
+    }
+  }
+}

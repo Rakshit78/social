@@ -1,0 +1,105 @@
+.calender-view {
+  .react-calendar {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    color: var(--Primary);
+    border-radius: 8px;
+    border: 2px solid var(--Stroke);
+    line-height: 2rem;
+    .react-calendar__tile:enabled:hover,
+    .react-calendar__tile:enabled:focus {
+      color: var(--Primary);
+      background-color: var(--Stroke);
+    }
+    .react-calendar__tile--now {
+      color: var(--Primary);
+      background-color: var(--Text-3);
+      font-weight: bold;
+    }
+    .react-calendar__tile--now:enabled:hover,
+    .react-calendar__tile--now:enabled:focus {
+      color: var(--Primary);
+      background-color: var(--Text-3);
+      font-weight: bold;
+    }
+    .react-calendar__tile--hasActive:enabled:hover,
+    .react-calendar__tile--hasActive:enabled:focus {
+      background: var(--Text-3);
+    }
+    .react-calendar__tile--active {
+      color: var(--Primary);
+      background-color: var(--Text-3);
+      font-weight: bold;
+    }
+    .react-calendar__tile--active:enabled:hover,
+    .react-calendar__tile--active:enabled:focus {
+      color: var(--Primary);
+      background-color: var(--Text-3);
+    }
+    .calendar-tile {
+      display: flex;
+      flex-direction: column;
+      border: solid var(--Stroke);
+      border-width: 1px 1px 1px 1px;
+      border-radius: 8px;
+      height: 12dvh;
+      overflow: scroll;
+    }
+  }
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calendar-modal-container {
+  overflow: scroll;
+  flex: 1;
+  width: 56dvw;
+  max-height: 72dvh;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 0.8rem;
+  .close {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+  }
+  .item-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 8px 0 8px 0;
+    padding: 16px;
+    height: fit-content;
+    background-color: var(--Grey);
+    cursor: pointer;
+    .message {
+      margin-bottom: 1rem;
+    }
+    .time {
+      margin-top: 1rem;
+      color: grey;
+      font-style: italic;
+      font-size: 0.6rem;
+    }
+  }
+  .item-container:last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.calendar-item {
+  border-radius: 4px;
+  background-color: var(--Primary);
+  padding: 4px 8px;
+  margin: 4px;
+  width: 100%;
+  .text {
+    text-align: left;
+    color: white;
+    text-overflow: ellipsis;
+  }
+}

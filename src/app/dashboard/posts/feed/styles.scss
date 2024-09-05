@@ -1,0 +1,81 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  .channel-page-selector-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    align-items: last baseline;
+    justify-content: flex-start;
+  }
+  .select-form {
+    margin: 1.6rem 0 0.8rem 0;
+    max-height: 12dvh;
+    .select {
+      min-width: 120px;
+      max-width: max-content;
+    }
+  }
+  .page-posts-analytics-container {
+    display: flex;
+    flex-direction: row;
+    max-height: 78dvh;
+    justify-content: center;
+    overflow-x: scroll;
+    gap: 2rem;
+    .posts-container {
+      overflow: scroll;
+      flex: 1;
+      max-width: 90dvw;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 0.8rem;
+      .post-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin: 8px 0 8px 0;
+        padding: 16px;
+        height: fit-content;
+        background-color: var(--Grey);
+        cursor: pointer;
+        .message {
+          margin-bottom: 1rem;
+        }
+        .time {
+          margin-top: 1rem;
+          color: grey;
+          font-style: italic;
+          font-size: 0.6rem;
+        }
+      }
+      .post-container-selected {
+        background-color: var(--Primary);
+        .message {
+          color: white;
+        }
+        .divider {
+          background-color: white;
+          opacity: 0.6;
+        }
+        .time {
+          color: white;
+          opacity: 0.8;
+        }
+      }
+      .post-container:last-child,
+      .post-container-selected:last-child {
+        margin-bottom: 0px;
+      }
+    }
+
+    @media only screen and (max-width: 40em) {
+      .posts-container {
+        min-width: 88dvw;
+      }
+      .analytics-container {
+        min-width: 88dvw;
+      }
+    }
+  }
+}

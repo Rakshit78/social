@@ -1,0 +1,113 @@
+.dashboard {
+  display: flex;
+
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    height: 100dvh;
+    box-shadow: 0.04px 0px 8px grey;
+
+    .tab {
+      padding: 24px 8px;
+      margin: 0 16px;
+      border-bottom: 0.5px dotted grey;
+    }
+  }
+
+  .page-loader {
+    height: 0.4rem;
+    width: 100%;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+  }
+
+  .content {
+    flex: 1;
+    padding: 1.2rem;
+    .appbar {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      background-color: transparent;
+    }
+    .dashboard-btn-cards {
+      margin-top: 1.6rem;
+      display: flex;
+      gap: 1.2rem 1.2rem;
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+    .all-analytics-wrapper {
+      margin-top: 1.6rem;
+      display: flex;
+      flex-direction: column;
+      max-height: 78dvh;
+      overflow-y: scroll;
+      gap: 0.8rem;
+      .analytics-holder {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
+        .analytic-container {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+          padding: 2rem;
+          height: 60dvh;
+          min-width: 25dvw;
+          overflow-y: scroll;
+          background-color: white;
+          .analytic-select {
+            margin-left: 2.8rem;
+            align-self: flex-start;
+            min-width: 8rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 40em) {
+  .dashboard {
+    flex-direction: column;
+    .navigation {
+      height: 5rem;
+      width: 100dvw;
+      padding-right: 24px;
+
+      .tab {
+        flex-direction: row;
+        padding: 24px 8px;
+        margin: 0 16px;
+        border-bottom: 0.5px dotted grey;
+      }
+    }
+
+    .page-loader {
+      top: 5rem;
+    }
+
+    .content {
+      .all-analytics-wrapper {
+        .analytics-holder {
+          .analytic-container {
+            min-width: 80dvw;
+          }
+        }
+      }
+    }
+  }
+}
+
+.signin-btn-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100dvh;
+}

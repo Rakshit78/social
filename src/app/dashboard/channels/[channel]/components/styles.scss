@@ -1,0 +1,19 @@
+.page-card {
+  padding: 16px !important;
+  min-width: 350px;
+  .title {
+    font-weight: bold;
+  }
+  .insights-container {
+    margin-top: 8px;
+    .insight {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      .number {
+        color: green;
+      }
+    }
+  }
+}

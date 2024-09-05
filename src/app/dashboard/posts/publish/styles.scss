@@ -1,0 +1,131 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  overflow-y: scroll;
+
+  .post-container {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    height: 86dvh;
+    gap: 2rem;
+    .form-container {
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      overflow-y: scroll;
+      background-color: white;
+      border-radius: 0.8rem;
+      .publish-container {
+        width: 100%;
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        flex: 1;
+        justify-content: space-between;
+        padding: 0 2rem;
+        .select-form {
+          flex: 2;
+          margin-inline-end: 1.2rem;
+        }
+        .buttons-container {
+          display: flex;
+          flex-direction: column;
+          flex: 1;
+          padding-inline-start: 1rem;
+          border-left: 2px solid var(--Grey);
+          .button {
+            margin: 0.2rem;
+          }
+        }
+      }
+      .post-inputs-container {
+        flex: 6;
+        display: flex;
+        flex-direction: column;
+        gap: 1.2rem 0;
+        overflow-y: scroll;
+        padding: 2rem;
+        .text-field-actions-holder {
+          display: flex;
+          flex-direction: column;
+          .text-field {
+            border: 1px solid var(--Stroke);
+            border-radius: 16px 16px 0 0;
+            background-color: var(--Grey);
+            padding: 16px 16px 0px 16px;
+          }
+          .text-field:hover {
+            border: 1.4px solid var(--Primary);
+          }
+          .action-buttons {
+            display: flex;
+            flex-direction: row;
+            gap: 0.4rem;
+            border: 1px solid var(--Stroke);
+            border-radius: 0 0 16px 16px;
+            background-color: var(--Grey);
+            padding: 16px;
+            align-items: center;
+            .image-holder {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              background-color: white;
+              width: 60px;
+              height: 60px;
+              border: 1px solid var(--Stroke);
+              border-radius: 16px;
+              cursor: pointer;
+            }
+            .campaign-select {
+              min-width: 200px;
+            }
+          }
+        }
+        .file-input {
+          display: none;
+        }
+        .image {
+          height: 30vh;
+          object-fit: contain;
+          flex: 6;
+          align-self: flex-start;
+        }
+        .add-image-button {
+          border-width: 1px;
+          border-style: dashed;
+          flex: 2;
+        }
+      }
+    }
+    .ai-container {
+      flex: 2;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-self: flex-end;
+      height: 100%;
+      background-color: white;
+      padding: 2rem;
+      border-radius: 0.8rem;
+      .title {
+        position: sticky;
+        top: 0px;
+        z-index: 2;
+        font-weight: bold;
+      }
+    }
+
+    @media only screen and (max-width: 40em) {
+      .form-container {
+        min-width: 88dvw;
+      }
+      .ai-container {
+        min-width: 88dvw;
+      }
+    }
+  }
+}

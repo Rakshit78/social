@@ -1,0 +1,39 @@
+{
+  "name": "social-pype",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "export": "next export",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chatscope/chat-ui-kit-react": "^1.10.1",
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.9",
+    "@mui/material": "^5.14.10",
+    "@mui/x-charts": "^6.18.2",
+    "@mui/x-date-pickers": "^6.16.2",
+    "@types/node": "20.6.2",
+    "@types/react": "^18.2.21",
+    "@types/react-dom": "^18.2.7",
+    "@vercel/analytics": "^1.1.2",
+    "@vercel/speed-insights": "^1.0.9",
+    "ai": "^2.2.31",
+    "eslint": "8.49.0",
+    "eslint-config-next": "^14.0.4",
+    "firebase": "^10.6.0",
+    "moment": "^2.29.4",
+    "next": "^14.1.0",
+    "openai": "^4.24.1",
+    "react": "^18.2.0",
+    "react-calendar": "^4.8.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.67.0",
+    "sharp": "^0.33.2",
+    "typescript": "5.2.2"
+  }
+}
